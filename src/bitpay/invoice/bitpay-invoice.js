@@ -4,7 +4,7 @@ module.exports.bitpayInvoice = data => {
   var bitauth = require("bitauth");
   var bitpay = require("bitpay");
   var encPrivkey = fs.readFileSync(HOME + "/.bitpay/api.key").toString();
-  var privkey = bitauth.decrypt("Phaser", encPrivkey); // decrypt with your key pass
+  var privkey = bitauth.decrypt("", encPrivkey); // decrypt with your key pass
   var client = bitpay.createClient(privkey);
 
   console.log("bitpayInvoice started...");
